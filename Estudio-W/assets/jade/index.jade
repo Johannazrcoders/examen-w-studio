@@ -1,0 +1,136 @@
+html(lang='es')
+	head
+		meta(charset='UTF-8')
+		title Estudio - W
+		link(rel='stylesheet', type='text/css', href='css/bootstrap.css')
+		link(rel='stylesheet', type='text/css', href='assets/css/elegant.css')
+		link(rel='stylesheet', type='text/css', href='css/main.css')
+		mixin info(title, sub)
+			.info
+				h4=title
+				h5=sub
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio praesentium iste aspernatur deleniti blanditiis possimus, mollitia iure. Mollitia, fuga, veritatis.
+				a(href="#")
+					i.social_facebook
+				a(href="#")
+					i.social_twitter
+				a(href="#")
+					i.social_googleplus
+				a(href="#")
+					i.social_pinterest
+				a(href="#")
+					i.social_linkedin
+
+		mixin subtitle(black, second)
+			.subtitle
+				h3=black
+				h3=second
+				.line
+		mixin graphics(tit)
+			.graph
+				img(src="images/online-store15.png")
+				.text
+					h4=tit
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores earum, rerum, eaque molestiae ipsam quas, facere, provident magni sunt nam distinctio! Ratione aperiam dicta, quae placeat .
+	body
+		header
+			.container
+				.row
+					.col-lg-4
+						img(src="images/w-logo.jpg")
+					.col-lg-8
+						nav
+							a(href="#") HOME
+							a(href="#") SERVICES
+							a(href="#") ABOUT
+							a(href="#") PORTFOLIO
+							a(href="#") TEAM
+							a(href="#") TESTIMONIAL
+							a(href="#") PRICING
+							a(href="#") CONTACT
+				.row.text-center
+					h1 Stand Out From The Crowd
+					h3 For photograhpher and freelancer who want to exclusively showcase their products.
+		section.services
+			.container
+				.row
+					.col-lg-6
+						img(src="images/p15.jpg")
+					.col-lg-6
+						.text-serv
+							+subtitle("Services","We Provide")
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptatibus rerum consectetur tempora, cumque voluptatum reprehenderit totam deserunt, eaque, asperiores.
+							+graphics("PSD TEMPLATE DESIGN")
+							+graphics("GRAPHICS DESIGN")
+							+graphics("PHOTOGRAPHY")
+		section.background
+			.container
+				.row
+					.col-lg-6
+						+subtitle("Welcome To","W Studio")
+						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt illo, blanditiis sed quisquam quam mollitia! Corporis modi optio repellat voluptate libero accusamus iure eius amet ullam laudantium, consequuntur tempore incidunt labore, reprehenderit. Ut excepturi cupiditate aliquam quam illum, veritatis quas quia consequuntur eos inventore repellat dolore perferendis. Repudiandae aliquid porro eaque dolore nulla veniam aperiam laboriosam veritatis fugi.
+					.col-lg-6
+						video(src="images/video.mp4")
+		section.person
+			.container
+				+subtitle("Meet The","Team")
+				.row
+					.col-lg-3
+						img(src="images/member7.jpg")
+					.col-lg-3
+						+info("NETHANEL GILROY","Founder & CEO")
+					.col-lg-3
+						img(src="images/member8.jpg")
+					.col-lg-3
+						+info("NAREK ROUBEN","Marketing Director")
+				.row
+					.col-lg-3
+						+info("SAMANTHA MILNER","Creative Director")
+					.col-lg-3
+						img(src="images/member9.jpg")
+					.col-lg-3
+						+info("LOUISE ALASTRIONA","UI/UX Specialist")
+					.col-lg-3
+						img(src="images/member10.jpg")
+		section.price
+			.container
+				+subtitle("Our Best","Offers")
+				.col-lg-3
+					.star
+						h2.text-center
+							strong 
+								| Starter
+						h1.text-center
+							strong
+								| $ 50/mo
+						table
+							tr
+								td.text-center
+									img(src="images/man88.png")
+									p 20 USERS
+								td.text-center
+									img(src="images/rectangles29.png")
+									p 10 PAGES
+							tr
+								td.text-center
+									img(src="images/database22.png")
+									p 20GB STORAGE
+								td.text-center
+									img(src="images/email162.png")
+									p 20 USERS
+
+				.col-lg-3
+				.col-lg-3
+				.col-lg-3
+		section.contact
+			.container
+				+subtitle("Contact","Us")
+				.col-lg-8
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eius saepe ex consequuntur, quae neque impedit earum incum dolor sit amet, consectetur adipisicing elit. Deleniti eius saepe.
+					form
+						input#txtNombre(type="text", size="35" title="Nombre", placeholder="Nombre*")
+                        input#txtEmail(type="email", size="35", title="Email", placeholder="Email*")
+                        input#txtNombre(type="email", size="35", title="Email", placeholder="Subject*") 
+                        textarea#txtMensaje.messaje(cols="27", rows="5", placeholder="Mensaje")    
+                        input(class="enviar" type="submit" value="ENVIAR")
+			.col-lg-4
